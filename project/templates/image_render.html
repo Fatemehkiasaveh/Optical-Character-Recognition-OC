@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Image to Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_styles.css') }}">
+
+</head>
+
+<body class="imageBody">
+    <div class="header">
+        <h1>Convert Image to Text</h1>
+    </div>
+    <main>
+
+        <div class="container">
+            <form action="{{ url_for('upload_file') }}" enctype="multipart/form-data" , method="post" class="imageform">
+                <label for="img">Choose an image:</label>
+                <input id="img" , name="img" , type="file" />
+                <button type="submit">Upload</button>
+            </form>
+            
+        {% if img %}
+        <div class="image-container">
+            <div class="image-wrapper">
+                <h2>Image</h2>
+                <img src="{{ img }}" alt="Uploaded Image" class="uploaded-image">
+            </div>
+            <div class="extracted-text">
+                <h2>Extracted Text</h2>
+                <ul>
+                    {% for text in extracted_text %}
+                    <li>{{ text }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% else %}
+        <h1 class="renderTitle">Image will be render here....</h1>
+        {% endif %}
+        </div>
+
+
+        <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    </main>
+    <div class="footer-container">
+        <footer>
+            <div>
+                <ul>
+                    <li><a href="https://github.com/Fatemehkiasaveh" target="_blank"><img
+                                src="../static/uploads/icons8-github-30.png" alt="GitHub"></a></li>
+                    <li><a href="https://ir.linkedin.com/in/fatemeh-saveh-666071187" target="_blank"><img
+                                src="../static/uploads/icons8-linkedin-30.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+            <p class="creator">Created by Fatemeh Saveh | CS50x Final Project</p>
+        </footer>
+    </div>    
+</body>
+
+</html>

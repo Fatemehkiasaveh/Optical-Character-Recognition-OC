@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_styles.css') }}">
+</head>
+
+<body class="register">
+    <div class="container">
+        <div class="inner">
+            <h1>Login</h1>
+            <form action="/login" method="POST" class="signupform">
+                <input type="text" name="username" placeholder="Username" required><br><br>
+                <input type="password" name="password" placeholder="Password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+            <p class="forget">Don't have an account? <a href="/signup">Sign Up here</a></p>
+        </div>            
+    </div>
+</body>
+
+</html>

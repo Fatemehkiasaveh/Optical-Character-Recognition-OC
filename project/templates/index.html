@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS50x Final Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <h1>OCR App</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('signup') }}" class="sign-up">Sign Up</a></li>
+                <li><a href="{{ url_for('login') }}" class="log-in">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>OCR - Optical Character Recognition</h2>
+            <p class="ocrdesc">Optical Character Recognition (OCR) is a technology that recognizes text within images, converting them into editable and searchable data.</p>
+        </section>
+    </main>
+    <div class="footer-container">
+        <footer>
+            <div>
+                <ul>
+                    <li><a href="https://github.com/Fatemehkiasaveh" target="_blank"><img src="../static/uploads/icons8-github-30.png" alt="GitHub"></a></li>
+                    <li><a href="https://ir.linkedin.com/in/fatemeh-saveh-666071187" target="_blank"><img src="../static/uploads/icons8-linkedin-30.png" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
+            <p class="creator">Created by Fatemeh Saveh | CS50x Final Project</p>
+        </footer>
+    </div>
+</body>
+</html>
